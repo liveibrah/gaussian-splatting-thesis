@@ -1,3 +1,51 @@
+# Thesis Research Fork Notice
+
+> [!IMPORTANT]
+> This repository is a research fork of the official
+> [GraphDeco/Inria 3D Gaussian Splatting repository](https://github.com/graphdeco-inria/gaussian-splatting).
+>
+> The original implementation was developed by Bernhard Kerbl, Georgios Kopanas,
+> Thomas Leimkühler, and George Drettakis. All original source files, authorship
+> notices, citation information, and license terms remain those of the upstream
+> project.
+>
+> The text below this notice is the original upstream README and is preserved for
+> installation instructions, usage documentation, citation, and attribution.
+
+## Purpose of this fork
+
+This fork accompanies an MSc thesis on efficient 3D Gaussian Splatting and
+depth-assisted reconstruction. It contains two independent experimental branches
+derived from the same upstream baseline:
+
+| Branch | Purpose | Main change |
+|---|---|---|
+| `main` | Upstream baseline and project documentation | Preserves the original implementation |
+| [`fp16_quantization`](https://github.com/liveibrah/gaussian-splatting-thesis/tree/fp16_quantization) | FP16 quantization experiment | Reconstructed FP16 changes in `scene/gaussian_model.py` |
+| [`opacity-pruning`](https://github.com/liveibrah/gaussian-splatting-thesis/tree/opacity-pruning) | Opacity-pruning experiment | Changes the native pruning threshold from `0.005` to `0.03` |
+
+The two experimental branches are independent. The opacity-pruning experiment
+was not applied on top of the FP16 branch.
+
+## Reproducibility notice
+
+The original workstation copies of the modified implementations were no longer
+available when this repository was organized. The branches were therefore
+reconstructed from the thesis documentation, surviving experiment records, and
+the author's recollection.
+
+The reconstructed code is intended to reflect the methods used in the thesis,
+but it may not be byte-for-byte identical to the original workstation versions.
+See [THESIS_MODIFICATIONS.md](THESIS_MODIFICATIONS.md) for the exact scope and
+current validation status.
+
+## Contributing
+
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before
+opening an issue or pull request.
+
+---
+
 # 3D Gaussian Splatting for Real-Time Radiance Field Rendering
 Bernhard Kerbl*, Georgios Kopanas*, Thomas Leimkühler, George Drettakis (* indicates equal contribution)<br>
 | [Webpage](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/) | [Full Paper](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_high.pdf) | [Video](https://youtu.be/T_kXY43VZnk) | [Other GRAPHDECO Publications](http://www-sop.inria.fr/reves/publis/gdindex.php) | [FUNGRAPH project page](https://fungraph.inria.fr) |<br>
